@@ -20,7 +20,7 @@ export default {
 		background: "#FFFFFF", //Backgrond Color
 		accentBackground: "#F7F7FD", //Nav Fill Color
 		white: "#FFFFFF"
-	}
+	},
   },
   plugins: [],
 };
