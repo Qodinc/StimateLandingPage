@@ -14,7 +14,7 @@ export default {
 		"4xl": "4rem",
 	},
 	colors: {
-		base: "#050315", //Text Primary Color
+		baseColor: "#050315", //Text Primary Color
 		accent:"#2F27CE", //Primary Color
 		lightAccent:"#443DFF", //Subtitle Color
 		background: "#FFFFFF", //Backgrond Color
