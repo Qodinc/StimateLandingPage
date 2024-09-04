@@ -13,6 +13,14 @@ export default {
 		"3xl": "3rem",
 		"4xl": "4rem",
 	},
+	colors: {
+		base: "#050315", //Text Primary Color
+		accent:"#2F27CE", //Primary Color
+		lightAccent:"#443DFF", //Subtitle Color
+		background: "#FFFFFF", //Backgrond Color
+		accentBackground: "#F7F7FD", //Nav Fill Color
+		white: "#FFFFFF"
+	}
   },
   plugins: [],
 };
