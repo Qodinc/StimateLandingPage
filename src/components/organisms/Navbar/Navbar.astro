@@ -1,2 +1,23 @@
 ---
+import Button from "../../atoms/Button.astro"
 ---
+<meta charset="UTF-8" />
+<nav class="flex w-full lg:pl-10 pl-4 pr-4 pt-1 pb-1 gap-4 shadow-2xl">
+    <div class="flex w-20 items-center justify-start">
+        <img class="size-12" src="Logo.svg" alt="Logo">
+    </div>
+    <div class="hidden lg:flex w-full p-2 pl-32 items-center justify-center">
+        <div class="w-full h-full text-baseColor items-center justify-center text-base font-semibold p-2 bg-accentBackground rounded-full flex gap-20">
+            <a class="text-lightAccent hover:text-accent" href="#"><span>Inicio</span></a>
+            <a class="hover:text-accent" href="#"><span>Beneficios</span></a>
+            <a class="hover:text-accent" href="#"><span>Planes</span></a>
+        </div>
+    </div>
+    <div class="flex gap-8 w-full lg:w-[44rem] lg:pr-10 items-center justify-end">
+        <Button/>
+        <a class="lg:hidden" href="#">
+            <img class="size-10" src="hamburgerMenu.svg" alt="Hamburger Menu">
+        </a>
+    </div>
+
+</nav>
