@@ -1,30 +1,30 @@
 ---
-const { Direccion, isLoggedIn } = Astro.props;
+//El link de dashboard necesita ser cambiado cuando tengamos links listos en backend
+const { link, isLoggedIn, primary, text } = Astro.props;
 ---
 
 {
-  isLoggedIn ? (
+  isLoggedIn === true ? (
       <a
-        class="text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium p-3 bg-accent border-2 border-accent rounded-full"
-        href={`${Direccion}`}
+        class="text-center text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2 bg-accent border-2 border-accent rounded-full"
+        href={`${link}`}
       >
         Dashboard
 
       </a>
-  ) : (
-    <div class="flex gap-5">
+  ) : primary === true ? (
       <a
-        class="text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium p-3 bg-background border-2 border-accent rounded-full"
-        href={`${Direccion}`}
+        class="text-center text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium px-4 py-2 bg-background border-2 border-accent rounded-full"
+        href={`${link}`}
       >
-        Iniciar sesión
+        
+        {text ? text: "?"}
       </a>
+      ) : 
       <a
-        class="text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium p-3 bg-accent border-2 border-accent rounded-full"
-        href={`${Direccion}`}
+        class="text-center text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2  bg-accent border-2 border-accent rounded-full"
+        href={`${link}`}
       >
-        Regístrate Ahora!
+        {text ? text: "??"}
       </a>
-    </div>
-  )
 }
