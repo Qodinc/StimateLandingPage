@@ -1,106 +1,13 @@
 ---
-import Section from "../../atoms/Section.astro";
-import Button from "../../atoms/Button.astro";
-import Subtitle from "../../atoms/Subtitle.astro";
-import Text from "../../atoms/text.astro";
-
-const cards = {
-    "card1":[
-        {
-            "title":"Basic",
-            "background":"white",
-            "titleColor":"accent",
-            "benefits": [
-                "Almacenaje para 5 proyectos", "Exportación solo en JPEG", "Define hasta 4 áreas por proyecto","Solo 2 exportaciones por proyecto"
-            ],
-            "button":"¡Registrate ahora!"
-        }
-    ], 
-    "card2":[
-        {
-            "title":"Premium",
-            "background":"accent",
-            "titleColor":"white",
-            "benefits": [
-                "Almacenaje para proyectos ilimitado","Exportaciones en PDF y JPG","Exportaciones por proyecto ilimitadas","Agregar más áreas de trabajo por proyecto"
-            ],
-            "button":"Contrata Ahora"
-        }
-    ]
-}
+import Section from "../../atoms/Section.astro"
 ---
-
 <Section>
-    <Subtitle 
-        subtitle="Elige el mejor plan para ti"
-        Color="accent"
-        />
-        <div class="flex flex-col gap-24 py-10 md:flex-row">
-            {cards.card1.map((card) => (
-                <div class="shadow-2xl rounded-3xl w-[18.75rem] xl:w-[25.25rem]">
-                    <div class={`bg-${card.background} py-1 px-4 rounded-t-3xl`}>
-                        <Subtitle 
-                            subtitle="Basico"
-                            Color={card.titleColor}
-                        />
-                        <Text 
-                        text="Gratis"
-                        Color={card.titleColor}
-                        />
-                    </div>
-                    <div class="py-5">
-                        <ul class="px-4 pt-10">
-                            {card.benefits.map((benefit) => (
-                                <li class="relative pl-6 py-1 md:py-3 xl:py-4 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-center before:bg-contain before:bg-no-repeat before:bg-[url('check.svg')]">
-                                    <Text 
-                                        text={benefit}
-                                        Color=baseColor
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div class="grid  justify-items-center py-10">
-                        <Button 
-                        link="##"
-                        text={card.button}
-                        />
-                    </div>
-                </div>
-                
-            ))}
-            {cards.card2.map((card) => (
-                <div class="shadow-2xl rounded-3xl w-[18.75rem] xl:w-[25.25rem]">
-                    <div class={`bg-${card.background} py-1 px-4 rounded-t-3xl`}>
-                        <Subtitle 
-                            subtitle="Premium"
-                            Color={card.titleColor}
-                        />
-                        <Text 
-                        text="$10 usd"
-                        Color={card.titleColor}
-                        />
-                    </div>
-                    <div class="py-5">
-                        <ul class="px-4 pt-10">
-                            {card.benefits.map((benefit) => (
-                                <li class="relative pl-6 py-4 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-center before:bg-contain before:bg-no-repeat before:bg-[url('check.svg')]">
-                                    <Text 
-                                        text={benefit}
-                                        Color=baseColor
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div class="grid  justify-items-center py-10">
-                        <Button 
-                        link="##"
-                        text={card.button}
-                        />
-                    </div>
-                </div>
-                
-            ))}
+    <h2 class="font-bold text-2xl text-accent">Elige el mejor plan para ti</h2>
+    <div class="w-full lg:px-28 lg:py-24 relative">
+        <img class="hidden lg:block absolute right-0 top-0" src="Vector8.svg" alt="">
+        <img class="hidden lg:block absolute left-0 bottom-0" src="Vector7.svg" alt="">
+        <div class="w-full flex flex-col md:flex-row justify-center items-center gap-16">
+            <!-- Card Here -->
         </div>
+    </div>
 </Section>
