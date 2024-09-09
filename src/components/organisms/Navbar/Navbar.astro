@@ -31,8 +31,9 @@ import Button from "../../atoms/Button.astro"
     </div>
     <div  id="sidebar" class="fixed z-10 top-0 left-0 h-full w-64 bg-gray-800 translate-x-[-100%] bg-white text-baseColor block transition-transform duration-300 ease-in-out lg:hidden shadow-2xl">
         <nav class="p-4">
-            <div class="flex w-20 items-center justify-start">
+            <div class="flex w-full items-center justify-between pr-4">
                 <img class="size-12" src="Logo.svg" alt="Logo">
+                <img src="/close.webp" id="close" class="size-8"/>
             </div>
             <ul class="pt-5 flex w-full flex-col gap-10 justify-center items-center text-center">
                 <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Inicio</a></li>
@@ -48,7 +49,16 @@ import Button from "../../atoms/Button.astro"
 </nav>
 
 <script>
-    document.getElementById('menu-btn').addEventListener('click', () => {
-        document.getElementById('sidebar').classList.toggle('translate-x-[0%]');
-    });
+    const menuButton = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+    const closeSide = document.getElementById("close");
+
+    // Función para alternar la visibilidad del sidebar
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('translate-x-[0%]');
+    };
+
+    // Agrega el mismo manejador de eventos a ambos botones
+    menuButton.addEventListener('click', toggleSidebar);
+    closeSide.addEventListener('click', toggleSidebar);
 </script>
