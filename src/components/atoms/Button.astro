@@ -1,6 +1,6 @@
 ---
 //El link de dashboard necesita ser cambiado cuando tengamos links listos en backend
-const { link, isLoggedIn, primary, text } = Astro.props;
+const { link, isLoggedIn, primary, text, adicionalClass } = Astro.props;
 ---
 
 {
@@ -14,7 +14,7 @@ const { link, isLoggedIn, primary, text } = Astro.props;
       </a>
   ) : primary === true ? (
       <a
-        class="text-center text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium px-4 py-2 bg-background border-2 border-accent rounded-full"
+        class=`text-center text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium px-4 py-2 bg-background border-2 border-accent rounded-full ${adicionalClass} `
         href={`${link}`}
       >
         
@@ -22,7 +22,7 @@ const { link, isLoggedIn, primary, text } = Astro.props;
       </a>
       ) : 
       <a
-        class="text-center text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2  bg-accent border-2 border-accent rounded-full"
+        class=` text-center text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2  bg-accent border-2 border-accent rounded-full ${adicionalClass} `
         href={`${link}`}
       >
         {text ? text: "??"}
