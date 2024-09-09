@@ -1,0 +1,40 @@
+---
+import Text from "../atoms/text.astro"
+import Subtitle from "../atoms/Subtitle.astro"
+
+const contentCard = [
+    {
+        "title":"¡Empieza!",
+        "body":"¡Únete a nuestra comunidad de freelancers y comienza a cotizar tus proyectos hoy mismo!",
+        "icon":"iconEmpieza.svg"
+    },
+    {
+        "title":"Simplifica",
+        "body":"Olvídate de las hojas de cálculo y las plantillas complicadas. Con nuestra plataforma intuitiva, podrás generar cotizaciones detalladas y personalizadas en cuestión de minutos.",
+        "icon":"iconSimplifica.svg"
+    },
+    {
+        "title":"Agiliza",
+        "body":"Agiliza el proceso de cotización, reduciendo el tiempo que pasas haciendo estimaciones manuales.",
+        "icon":"iconAgiliza.svg"
+    }
+]
+---
+<div class="flex flex-col w-full gap-16 px-20">
+    {
+        contentCard.map((card) => (
+            <div class="shadow-2xl flex flex-col w-full min-h-52 rounded-3xl items-center justify-center gap-2 py-4 px-10">
+                <div class="flex w-full items-center justify-center">
+                    <img src={card.icon} alt="Icon">
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <Subtitle subtitle={card.title}  />
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <Text text={card.body} />
+                </div>
+
+            </div>
+        ))
+    }
+</div>
