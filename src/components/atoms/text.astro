@@ -1,6 +1,6 @@
 ---
 
-const {text, Color} = Astro.props
+const {text, Color, adicionalClass} = Astro.props
 
 ---
-<span class=`text-baseM md:text-base text-${Color} font-normal leading-6`>{text}<slot/></span>
+<span class=`text-baseM md:text-base text-${Color} font-normal leading-6 font-comfortaa ${adicionalClass} `>{text}<slot/></span>

@@ -40,12 +40,13 @@ const cards = [
             />
         </div>
         <div class="py-5">
-            <ul class="px-4 pt-10">
+            <ul class="px-4 flex flex-col justify-center align-center">
                 {card.benefits.map((benefit) => (
                     <li class="relative pl-6 py-1 md:py-3 xl:py-4 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-center before:bg-contain before:bg-no-repeat before:bg-[url('check.svg')]">
                         <Text 
                             text={benefit}
                             Color=baseColor
+                            adicionalClass="font-bold"
                         />
                     </li>
                 ))}

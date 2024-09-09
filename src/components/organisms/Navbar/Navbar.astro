@@ -15,7 +15,14 @@ import Button from "../../atoms/Button.astro"
         </div>
     </div>
     <div class="flex gap-8 w-full lg:w-[44rem] items-center justify-end">
-        <Button/>
+        <Button
+        primary = {true}
+        text = "Iniciar sesión"
+        />
+        <Button
+        text = "¡Regístrate ahora!"
+        adicionalClass = "hidden xl:block "
+        />
         <a class="lg:hidden" href="#">
             <img class="size-10" src="hamburgerMenu.svg" alt="Hamburger Menu">
         </a>
