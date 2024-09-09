@@ -20,7 +20,10 @@ export default {
 		background: "#FFFFFF", //Backgrond Color
 		accentBackground: "#F7F7FD", //Nav Fill Color
 		white: "#FFFFFF"
-	}
+	},
+	fontFamily: {
+        comfortaa: ['Comfortaa', 'sans-serif'],
+      }
   },
   plugins: [],
 };

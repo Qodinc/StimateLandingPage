@@ -3,7 +3,7 @@ import Button from "../../atoms/Button.astro"
 ---
 <meta charset="UTF-8" />
 
-<nav class="flex w-full lg:px-20 md:px-8 px-4 py-1 gap-4 shadow-2xl">
+<nav class="sticky z-10 top-0 flex w-full lg:px-20 md:px-8 px-4 py-1 gap-4 shadow-md bg-white">
     <div class="flex w-20 items-center justify-start">
         <img class="size-12" src="Logo.svg" alt="Logo">
     </div>
@@ -15,10 +15,50 @@ import Button from "../../atoms/Button.astro"
         </div>
     </div>
     <div class="flex gap-8 w-full lg:w-[44rem] items-center justify-end">
-        <Button/>
-        <a class="lg:hidden" href="#">
+        <Button
+        primary = {true}
+        text = "Iniciar sesión"
+        adicionalClass = "hidden lg:block "
+        />
+        <Button
+        text = "¡Regístrate ahora!"
+        adicionalClass = "hidden xl:block "
+        />
+        <button class="lg:hidden" id="menu-btn">
             <img class="size-10" src="hamburgerMenu.svg" alt="Hamburger Menu">
-        </a>
+        </button>
+        
     </div>
+    <div  id="sidebar" class="fixed z-10 top-0 left-0 h-full w-64 bg-gray-800 translate-x-[-100%] bg-white text-baseColor block transition-transform duration-300 ease-in-out lg:hidden shadow-2xl">
+        <nav class="p-4">
+            <div class="flex w-full items-center justify-between pr-4">
+                <img class="size-12" src="Logo.svg" alt="Logo">
+                <img src="/close.webp" id="close" class="size-8"/>
+            </div>
+            <ul class="pt-5 flex w-full flex-col gap-10 justify-center items-center text-center">
+                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Inicio</a></li>
+                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Beneficios</a></li>
+                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#">Planes</a></li>
+                <li><Button primary = {true} text = "Iniciar sesión" link="##"/></li>
+                <li><Button text = "¡Regístrate ahora!" link="##"/></li>
+            </ul>
+        </nav>
+    </div>
+    
 
 </nav>
+
+<script>
+    const menuButton = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+    const closeSide = document.getElementById("close");
+
+    // Función para alternar la visibilidad del sidebar
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('translate-x-[0%]');
+    };
+
+    // Agrega el mismo manejador de eventos a ambos botones
+    menuButton.addEventListener('click', toggleSidebar);
+    closeSide.addEventListener('click', toggleSidebar);
+</script>
