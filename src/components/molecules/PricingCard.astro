@@ -1,7 +1,7 @@
 ---
 import Button from "../atoms/Button.astro";
 import Subtitle from "../atoms/Subtitle.astro";
-import Text from "../atoms/text.astro";
+import Text from "../atoms/Text.astro";
 
 const cards = [
         {
@@ -29,14 +29,15 @@ const cards = [
 ---
 {cards.map((card, index) => (
     <div class="shadow-2xl rounded-3xl w-full max-w-[25.25rem]">
-        <div class=`bg-${card.background} py-1 px-4 rounded-t-3xl`>
+        <div class={`bg-${card.background} py-1 px-4 rounded-t-3xl`}>
             <Subtitle 
                 subtitle={card.title}
-                Color={card.titleColor}
+                color={card.titleColor}
             />
             <Text 
             text={card.price}
-            Color={card.titleColor}
+            color={card.titleColor}
+            adicionalClass="font-bold"
             />
         </div>
         <div class="py-5">
@@ -45,7 +46,7 @@ const cards = [
                     <li class="relative pl-6 py-1 md:py-3 xl:py-4 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-center before:bg-contain before:bg-no-repeat before:bg-[url('check.svg')]">
                         <Text 
                             text={benefit}
-                            Color=baseColor
+                            color="baseColor"
                             adicionalClass="font-bold"
                         />
                     </li>

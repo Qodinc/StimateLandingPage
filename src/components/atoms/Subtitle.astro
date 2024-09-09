@@ -1,6 +1,6 @@
 ---
 
-const {subtitle, Color} = Astro.props
+const {subtitle, color, textAlign} = Astro.props
 
 ---
-<h2 class=`text-lg md:text-lg lg:text-3xl text-${Color} font-semibold`>{subtitle}<slot/></h2>
+<h2 class=`text-2xl lg:text-3xl text-${color} font-bold text-${textAlign}`>{subtitle}<slot/></h2>
