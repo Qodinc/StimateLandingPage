@@ -1,0 +1,20 @@
+---
+import Button from "../../atoms/Button.astro"
+---
+
+<main class="flex flex-col items-center justify-center text-baseColor gap-12 py-6 lg:flex-row px-4 md:px-8 lg:px-20">
+    <div class="text-center w-3/4 flex flex-col gap-4 items-center lg:items-start lg:text-start lg:w-full">
+        <p class="hidden md:block text-accent font-bold text-lg md:text-xl">Tus presupuestos, tus reglas</p>
+        <h1 class="text-2xl font-semibold text-lightAccent lg:text-4xl leading-none">Cotiza como un profesional con <span class="text-accent font-bold">Stimate</span></h1>
+        <h2 class="text-base lg:text-lg">Cotiza fácil y rápido: La guía definitiva para freelancers de programación.</h2>
+        <div class="mt-6 lg:hidden">
+            <Button
+                text="¡Regístrate ahora!"
+            />
+        </div>
+    </div>
+    <img src="/heroImageMobile.webp" 
+    srcset="/heroImageMobile.webp 320w, /heroImageTablet.webp 768w, /heroImageDesktop.webp 1024w"
+    sizes="(max-width: 480px) 320px, (max-width: 800px) 768px, 1024px"
+    alt="" class="w-full object-cover lg:w-full">
+</main>
