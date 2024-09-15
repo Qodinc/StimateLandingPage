@@ -1,0 +1,35 @@
+---
+const links = [
+  {
+    title: "Términos y condiciones",
+    href: "#",
+  },
+  {
+    title: "Inicio",
+    href: "#",
+  },
+  {
+    title: "Beneficios",
+    href: "#",
+  },
+  {
+    title: "Planes",
+    href: "#",
+  },
+];
+---
+
+<footer class="flex md:items-center justify-between py-5 px-4 md:px-8 lg:px-20 relative bg-white before:content-[''] before:w-2/3 before:rounded-full before:left-1/2 before:transform before:-translate-x-1/2 before:top-0 before:h-[3px] before:absolute before:bg-accentBackground">
+  <img src="/Logo.svg" alt="Logo de Stimate" class="size-10" />
+  <ul class="text-center md:flex md:gap-10">
+    {
+      links.map((link, index) => (
+        <li id={`link-${index}`}>
+          <a href={`${link.href}`}>{link.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <img src="/linkedin.webp" alt="linkedin" class="size-10" />
+</footer>

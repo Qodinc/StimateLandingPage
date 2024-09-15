@@ -1,13 +1,19 @@
 ---
 import Section from "../../atoms/Section.astro"
+import PricingCard from "../../molecules/PricingCard.astro"
+import Subtitle from "../../atoms/Subtitle.astro"
 ---
 <Section>
-    <h2 class="font-bold text-2xl text-accent">Elige el mejor plan para ti</h2>
+    <Subtitle
+      subtitle="Elige el mejor plan para ti"
+      color="accent"
+      textAlign="center"
+    />
     <div class="w-full lg:px-28 lg:py-24 relative">
         <img class="hidden lg:block absolute right-0 top-0" src="Vector8.svg" alt="">
         <img class="hidden lg:block absolute left-0 bottom-0" src="Vector7.svg" alt="">
-        <div class="w-full flex flex-col md:flex-row justify-center items-center gap-16">
-            <!-- Card Here -->
+        <div class="w-full flex flex-col md:flex-row justify-center items-center xl:items-end gap-16">
+          <PricingCard/>
         </div>
     </div>
 </Section>
