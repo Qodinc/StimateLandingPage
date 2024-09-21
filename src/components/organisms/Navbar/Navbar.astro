@@ -4,14 +4,14 @@ import Button from "../../atoms/Button.astro"
 <meta charset="UTF-8" />
 
 <nav class="sticky z-10 top-0 flex w-full lg:px-20 md:px-8 px-4 py-1 gap-4 shadow-md bg-white">
-    <div class="flex w-20 items-center justify-start">
-        <img class="size-12" src="Logo.svg" alt="Logo">
-    </div>
+    <a href="#" class="flex w-20 items-center justify-start">
+        <img class="size-12 cursor-pointer" src="Logo.svg" alt="Logo" >
+    </a>
     <div class="hidden lg:flex w-full p-2 pl-32 items-center justify-center">
         <div class="w-full h-full text-baseColor items-center justify-center text-base font-semibold p-2 bg-accentBackground rounded-full flex gap-20">
             <a class="text-lightAccent hover:text-accent" href="#"><span>Inicio</span></a>
-            <a class="hover:text-accent" href="#"><span>Beneficios</span></a>
-            <a class="hover:text-accent" href="#"><span>Planes</span></a>
+            <a class="hover:text-accent" href="#benefits"><span>Beneficios</span></a>
+            <a class="hover:text-accent" href="#pricing"><span>Planes</span></a>
         </div>
     </div>
     <div class="flex gap-8 w-full lg:w-[44rem] items-center justify-end">
@@ -37,8 +37,8 @@ import Button from "../../atoms/Button.astro"
             </div>
             <ul class="pt-5 flex w-full flex-col gap-10 justify-center items-center text-center">
                 <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Inicio</a></li>
-                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Beneficios</a></li>
-                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#">Planes</a></li>
+                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#benefits" >Beneficios</a></li>
+                <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#pricing">Planes</a></li>
                 <li><Button primary = {true} text = "Iniciar sesión" link="##"/></li>
                 <li><Button text = "¡Regístrate ahora!" link="##"/></li>
             </ul>
