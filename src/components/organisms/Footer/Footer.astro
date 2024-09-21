@@ -20,7 +20,9 @@ const links = [
 ---
 
 <footer class="flex md:items-center justify-between py-5 px-4 md:px-8 lg:px-20 relative bg-white before:content-[''] before:w-2/3 before:rounded-full before:left-1/2 before:transform before:-translate-x-1/2 before:top-0 before:h-[3px] before:absolute before:bg-accentBackground">
-  <img src="/Logo.svg" alt="Logo de Stimate" class="size-10" />
+  <a href="#" cursor-pointer>
+    <img src="/Logo.svg" alt="Logo de Stimate" class="size-10" />
+  </a>
   <ul class="text-center md:flex md:gap-10">
     {
       links.map((link, index) => (
@@ -31,5 +33,7 @@ const links = [
     }
   </ul>
 
-  <img src="/linkedin.webp" alt="linkedin" class="size-10" />
+  <a href="https://www.linkedin.com/company/qodinc/" target="_blank" cursor-pointer>
+    <img src="/linkedin.webp" alt="linkedin" class="size-10" />
+  </a>
 </footer>
