@@ -3,7 +3,7 @@ import Text from "../atoms/Text.astro"
 import Subtitle from "../atoms/Subtitle.astro"
 const {icon, title, color, body, id, aditionalClass} = Astro.props;
 ---
-<div id={'card'+id} class=`flex flex-col ${aditionalClass} max-w-80 lg:max-w-none flex-wrap lg:static w-full lg:rounded-none rounded-3xl items-center justify-start gap-2 p-7 lg:shadow-none shadow-[10px_10px_15px_rgba(0,0,0,0.1)]`>
+<div id={'card'+id} class=`flex flex-col ${aditionalClass} border border-accentBackground lg:border-none max-w-80 lg:max-w-none flex-wrap lg:static w-full lg:rounded-none rounded-3xl items-center justify-start gap-2 p-7 lg:shadow-none shadow-[10px_10px_15px_rgba(0,0,0,0.1)]`>
     <div class="flex w-full items-center justify-center md:justify-start">
         <img src={icon} alt="Icon">
     </div>
